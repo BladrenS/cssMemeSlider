@@ -4,20 +4,20 @@
 }
 
 body {
-   background-color: #424a53;
+   background-color: #202020;
 }
 
 input {
-   visibility: hidden;
+   display: none;
 }
 
 .slider-container {
    width: 66%;
    height: 60vh;
    margin: 10vh auto;
-   background-color: #0d1117;
    border-radius: 10px;
-   /*overflow: hidden;*/
+   overflow: hidden;
+   background-color: #0d1117;
 }
 
 .slides {
@@ -28,6 +28,7 @@ input {
 
 .slide {
    width: 20%;
+   transition: all 0.8s ease;
 }
 
 .image {
@@ -37,6 +38,8 @@ input {
 
 .slider-footer {
    height: 20%;
+   display: flex;
+   margin-top: 1rem;
 }
 
 .controls {
@@ -45,10 +48,63 @@ input {
 }
 
 .control {
-   width: 0.5rem;
-   height: 0.5rem;
-   margin: 3px;
+   display: flex;
+   align-items: center;
    cursor: pointer;
-   background-color: #00eeff;
+   height: 0.9rem;
+   padding: 5px;
+   margin: 2px;
+   outline: 0;
+}
+
+.circle {
+   width: 0.4rem;
+   height: 0.4rem;
+   cursor: pointer;
+   background-color: #0099ff;
+   border: 1px solid #0099ff;
    border-radius: 50%;
+}
+
+.control:hover .circle{
+   background-color: #fff;
+   border-color: #fff;
+}
+
+.control:focus .circle {
+   background-color: inherit;
+}
+
+.control:active  .circle{
+   background-color: #818181;
+   border-color: #818181;
+}
+
+.slide-texts {
+   display: flex;
+   width: 500%;
+}
+
+.text {
+   color: #ffffff;
+}
+
+#r1:checked ~ .first {
+   margin-left: 0;
+}
+
+#r2:checked ~ .first {
+   margin-left: -20%;
+}
+
+#r3:checked ~ .first {
+   margin-left: -40%;
+}
+
+#r4:checked ~ .first {
+   margin-left: -60%;
+}
+
+#r5:checked ~ .first {
+   margin-left: -80%;
 }
