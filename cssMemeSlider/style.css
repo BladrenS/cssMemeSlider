@@ -4,7 +4,7 @@
 }
 
 body {
-   background-color: #202020;
+   background-color: #3d3d3d;
 }
 
 input {
@@ -12,12 +12,11 @@ input {
 }
 
 .slider-container {
-   width: 66%;
+   width: 50%;
    height: 60vh;
    margin: 10vh auto;
    border-radius: 10px;
    overflow: hidden;
-   background-color: #0d1117;
 }
 
 .slides {
@@ -39,12 +38,12 @@ input {
 .slider-footer {
    height: 20%;
    display: flex;
+   justify-content: space-between;
    margin-top: 1rem;
 }
 
 .controls {
    display: flex;
-   height: 100%;
 }
 
 .control {
@@ -81,12 +80,29 @@ input {
 }
 
 .slide-texts {
+   width: 38%;
+   overflow: hidden;
+}
+
+.image {
+   border-radius: 10px;
+}
+
+.texts {
    display: flex;
-   width: 500%;
+   flex-direction: column;
+   transition: all 0.8s ease;
 }
 
 .text {
    color: #ffffff;
+   margin-bottom: 5.5rem;
+   transition: all 0.8s ease;
+}
+
+.t {
+   margin-left: 10%;
+   background-color: #ff8383;
 }
 
 #r1:checked ~ .first {
@@ -107,4 +123,30 @@ input {
 
 #r5:checked ~ .first {
    margin-left: -80%;
+}
+
+@media (max-width: 768px) {
+   .slider-footer {
+      flex-direction: column;
+   }
+
+   .controls {
+      order: -1;
+      justify-content: center;
+      margin-bottom: 1rem;
+   }
+
+   .slide-texts {
+      width: 100%;
+   }
+}
+
+@media (max-width: 700px) {
+   .slider-container {
+      width: 75%;
+   }
+
+   .slides {
+      height: 55%;
+   }
 }
