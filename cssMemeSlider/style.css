@@ -4,7 +4,7 @@
 }
 
 body {
-   background-color: #3d3d3d;
+   background-color: #3a3a3a;
 }
 
 input {
@@ -65,8 +65,8 @@ input {
    width: 0.4rem;
    height: 0.4rem;
    cursor: pointer;
-   background-color: #0099ff;
-   border: 1px solid #0099ff;
+   background-color: #007dd1;
+   border: 1px solid #007dd1;
    border-radius: 50%;
 }
 
@@ -106,11 +106,6 @@ input {
    display: inline-block;
    color: #ffffff;
    transition: all 0.8s ease;
-}
-
-.t {
-   margin-left: 10%;
-   background-color: #ff8383;
 }
 
 #r1:checked ~ .first {
